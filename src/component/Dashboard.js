@@ -4,7 +4,7 @@ import apiconfig from '../config/api.config.json'
 import Header from './Header'
 //import Sidebar from './Sidebar'
 import home from './home'
-//import Footer from "../component/Footer";
+import Footer from "../component/Footer";
 //import {Redirect} from 'react-router'
 
 class Dashboard extends React.Component {
@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
                         {/* </div>
                     </section>
                 </div> */}
-                {/* <Footer /> */}
+                <Footer /> 
             </div>
         )
     }

@@ -2,14 +2,7 @@ import React from "react";
 import API from "../helpers/API";
 import axios from 'axios'
 import config from "../config/api.config.json"
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBModalFooter,
-  MDBIcon,
-  MDBCardHeader,
-  MDBBtn,
-  MDBInput} from "mdbreact";
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter} from "mdbreact";
 
 class Header extends React.Component {
   constructor(props) {
@@ -17,7 +10,9 @@ class Header extends React.Component {
     this.state = {
       formdata: {
         username: "",
+        fullname: "",
         password: "",
+        photo: "",
         is_deleted: 'false',
         status: 'unlocked',
         login_ke: '0',
@@ -187,6 +182,16 @@ class Header extends React.Component {
       </div>
       <div class="modal-body">
       <form>
+      <div class="form-group">
+          <label for="fullname">Fullname</label>
+          <input type="text" 
+          class="form-control" 
+          placeholder="fullname"
+          name="fullname"
+          value={this.state.formdata.fullname}
+          onChange={this.textChanged}
+          />
+        </div>
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" 
@@ -214,6 +219,16 @@ class Header extends React.Component {
           placeholder="password"
           name="password"
           value={this.state.formdata.password}
+          onChange={this.textChanged}
+          />
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo</label>
+          <input type="text" 
+          class="form-control" 
+          placeholder="photo"
+          name="photo"
+          value={this.state.formdata.photo}
           onChange={this.textChanged}
           />
         </div>

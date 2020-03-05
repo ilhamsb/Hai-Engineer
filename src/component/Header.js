@@ -7,7 +7,7 @@ class Header extends React.Component {
 
   componentWillReceiveProps(newProps) {
     this.setState({
-        formdata : newProps.username
+        formdata : newProps.username,
     })
 }
 
@@ -64,16 +64,17 @@ class Header extends React.Component {
     <MDBRow>
       <MDBCol style={{ minHeight: '26rem' }}>
         <center>
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="" className="img-circle" style={{backgroundSize:"50%"}} />
+            <img src={userdata[0].photo} alt="" className="img-circle" style={{height:"200px"}} />
             <MDBCardBody>
-              <h3 className="font-weight-bold text-dark">{userdata[0].username}</h3>
+              <h3 className="font-weight-bold text-dark">{userdata[0].fullname}</h3>
+              <hr style={{borderWidth:"2", borderColor:"#000000"}}/>
               <h5 className="font-weight-bold text-dark">Software Engineer</h5>
             </MDBCardBody>
         
           <MDBCard className="face back">
             <MDBCardBody>
               <h4 className="font-weight-bold text-dark">About me</h4>
-              <hr />
+              <hr style={{borderWidth:"2", borderColor:"#000000"}}/>
               <p class="text-dark">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maxime quae, dolores dicta. Blanditiis rem amet repellat,
